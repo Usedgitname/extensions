@@ -1,0 +1,78 @@
+-- {"id":1788,"ver":"1.0.0","libVer":"1.0.0","author":"Usedgitname","repo":"","dep":["foo","bar"]}
+
+local baseURL = "https://novel-bin.com/"
+
+
+-- Filter Keys & Values
+local STATUS_FILTER = 2
+local STATUS_VALUES = { "All", "Ongoing", "Completed" }
+local STATUS_TERMS = { "", "active", "completed" }
+local ORDER_BY_FILTER = 3
+local ORDER_BY_VALUES = { "Latest Update", "Most Views", "Month Views", "Week Views", "New" }
+local ORDER_BY_TERMS = { "updatetime", "hits", "month_hits", "rating", "inputtime" }
+local GENRE_FILTER = 4
+local GENRE_VALUES = {
+	"Action",
+	"Adult",
+	"Adventure",
+	"Arts",
+	"Chinese",
+	" Comedy",
+	"Contemporary romance",
+	"Drama",
+	"Eastern",
+	"Eastern fantasy",
+	"Ecchi",
+	"Fantasy",
+	"Fantasy romance",
+	"Game",
+	"Gender bender",
+	"Harem",
+	"Modern",
+	"CEO",
+	"Romantic",
+	"Urban",
+	"Historical",
+	"Horror",
+	"Isekai",
+	"Josei",
+	"Lgbt+",
+	"Magic",
+	"Magical realism",
+	"Manhua",
+	"Martial arts",
+	"Mature"
+	"Mecha",
+	"Modern life",
+	"Mystery",
+	"Psychological",
+	"Realistic fiction",
+	"Reincarnation",
+	"Romance",
+	"School life",
+	"Sci-fi",
+	"Seinen",
+	"Shoujo",
+	"Shoujo ai",
+	"Shounen",
+	"Shounen ai",
+	"Slice of life",
+	"Smut",
+	"Sports",
+	"Supernatural",
+	"System",
+	"Tragedy",
+	"Urban",
+	"Urban life",
+	"Video games",
+	"Wuxia",
+	"Xianxia",
+	"Xuanhuan",
+	"Yaoi",
+	"Yuri",
+}
+local searchFilters = {
+	DropdownFilter(ORDER_BY_FILTER, "Order by", ORDER_BY_VALUES),
+	DropdownFilter(STATUS_FILTER, "Status", STATUS_VALUES),
+	DropdownFilter(GENRE_FILTER, "Genre", GENRE_VALUES)
+}
